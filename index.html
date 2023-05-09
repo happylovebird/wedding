@@ -302,14 +302,14 @@
 			<span style="color: rgba(0,0,0,0.8); line-height:40pt">신랑측 마음</span><br/>
 			신한은행 110-189-893214<br/>
 			이봉기
-			<button class="gray" onclick="accountNumberCopy('123456789')">복사하기</button> &nbsp
+			<button class="gray" onclick="accountNumberCopy('110189893214')">복사하기</button> &nbsp
 			<a href="https://qr.kakaopay.com/Ej7rnqkcJ"><img src="images/kakaopay.png"></a><br/>
 		</p>
 		<p style="text-align: left; font-size: 16px;">
 			<span style="color: rgba(0,0,0,0.8); line-height:40pt">신부측 마음</span><br/>
 			신한은행 110-528-774312<br/>
 			양혜진
-			<button class="gray" onclick="accountNumberCopy('123456789')">복사하기</button> &nbsp
+			<button class="gray" onclick="accountNumberCopy('110528774312')">복사하기</button> &nbsp
 			<a href="https://qr.kakaopay.com/FH1birgNa"><img src="images/kakaopay.png"></a><br/>
 		</p>
 	</div>
@@ -346,6 +346,43 @@
 
 <div class="row animate-box" style="height: auto; width: 100%; margin: auto; border:0.7px solid rgba(82, 81, 81, 0.1);"></div>
 
+<div id="qbootstrap-countdown" style="padding: 7em 1;background-image: url(images/photo/bottom.jpg); background-position: center" data-section="wedding-day">
+	<div class="overlay"></div>
+	<div class="display-over">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-12 section-heading text-center svg-sm colored">
+					<p style="text-align: center; font-size: 16px;">
+					<span class="datewed">우리가 만나기까지</span>
+					</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center;">
+					<p class="countdown" style="text-align: center; font-size: 16px">
+						<span id="days" >
+							5
+							<small>days</small>
+						</span>
+					<span id="hours">
+							5
+							<small>hours</small>
+						</span>
+					<span id="minutes">
+							5
+							<small>minutes</small>
+						</span>
+					<span id="seconds">
+							5
+							<small>seconds</small>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div>
 	<div style="height: auto; width: 80%; margin: auto;">
 		<p style="font-size: 14px; text-align: center; margin-bottom: 0px; color: rgba(0, 0, 0, 0.5)">
@@ -353,8 +390,6 @@
 		</p>
 	</div>
 </div>
-
-
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
@@ -419,6 +454,7 @@
 
   }
 
+</script>
 <!-- 카카오내비 목적지 설정 및 실행 -->
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js"
   integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
@@ -433,7 +469,6 @@
         })
     }
 </script>
-
 <script>
     function accountNumberCopy(accountNumber) {
         window.navigator.clipboard.writeText(accountNumber).then(() => {
