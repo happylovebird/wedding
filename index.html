@@ -419,6 +419,21 @@
 
   }
 
+<!-- 카카오내비 목적지 설정 및 실행 -->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js"
+  integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    Kakao.init('b5051d4b026ab8cba99a63e9d8c6031f');
+    function kakaoNavi() {
+        Kakao.Navi.start({
+            name:"ㅇㅇㅇㅇ",
+            x:126.9964776,
+            y:37.490444,
+            coordType:'wgs84'
+        })
+    }
+</script>
+
 <script>
     function accountNumberCopy(accountNumber) {
         window.navigator.clipboard.writeText(accountNumber).then(() => {
