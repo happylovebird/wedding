@@ -276,8 +276,6 @@
 		<p style="font-size: 18px; margin-bottom: 20px; color: rgba(0, 0, 0, 0.8)">
 			<br/>| 오시는 길
 		</p>
-		
-		
 		<!--
 			* 카카오맵 - 약도서비스
 			* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
@@ -440,62 +438,7 @@
 <!-- Main JS (Do not remove) -->
 <script src="js/main.js?v=20180722"></script>
 <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b5051d4b026ab8cba99a63e9d8c6031f"></script>
-<script>
-  var container = document.getElementById('map');
-  var options = {
-    center: new daum.maps.LatLng(37.5526889,126.9173249),
-    level: 4
-  };
 
-  var map = new daum.maps.Map(container, options);
-
-  //map.setDraggable(false);
-
-  var positions = [
-    {
-      title: '웨딩시그니처',
-      latlng: new daum.maps.LatLng(37.5526889,126.9173249),
-      link: "https://place.map.kakao.com/803348028"
-	}
-  ];
-
-  for (var i = 0; i < positions.length; i ++) {
-
-    // 마커를 생성합니다
-    var marker = new daum.maps.Marker({
-      position: positions[i].latlng
-    });
-
-    marker.setMap(map);
-
-    var iwContent = '<a style="padding: 5px; font:14px/2 sans-serif; text-decoration: underline;" target="_blank" href="' + positions[i].link +'"><strong>' + positions[i].title  + '</strong></a>',
-        iwPosition = positions[i].latlng
-
-
-    var infowindow = new daum.maps.InfoWindow({
-      position: iwPosition, // 마커를 표시할 위치
-      content : iwContent, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-    });
-
-    infowindow.open(map, marker);
-
-  }
-
-</script>
-<!-- 카카오내비 목적지 설정 및 실행 -->
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js"
-  integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    Kakao.init('b5051d4b026ab8cba99a63e9d8c6031f');
-    function kakaoNavi() {
-        Kakao.Navi.start({
-            name:"웨딩시그니처",
-            x:126.9173249,
-            y:37.5526889,
-            coordType:'wgs84'
-        })
-    }
-</script>
 <script>
     function accountNumberCopy(accountNumber) {
         window.navigator.clipboard.writeText(accountNumber).then(() => {
